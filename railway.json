@@ -1,0 +1,8 @@
+{
+  "build": {
+    "builder": "DOCKERFILE"
+  },
+  "deploy": {
+    "startCommand": "streamlit run src/digit_recognizer.py --server.port $PORT --server.address 0.0.0.0"
+  }
+}
