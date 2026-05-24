@@ -6,6 +6,13 @@ import numpy as np
 from PIL import Image
 from pathlib import Path
 
+import os
+import sys
+
+if 'PORT' in os.environ:
+    port = int(os.environ['PORT'])
+    sys.argv.extend(['--server.port', str(port)])
+    
 class MNISTModel(nn.Module):
     def __init__(self):
         super().__init__()
