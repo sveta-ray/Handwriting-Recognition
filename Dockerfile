@@ -9,4 +9,4 @@ COPY src/ ./src/
 
 EXPOSE 8501
 
-CMD ["sh", "-c", "streamlit run src/digit_recognizer.py --server.port ${PORT:-8501} --server.address 0.0.0.0"]
+CMD streamlit run src/digit_recognizer.py --server.port 8501 --server.address 0.0.0.0
